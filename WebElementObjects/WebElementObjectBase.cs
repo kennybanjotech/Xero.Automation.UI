@@ -13,7 +13,7 @@ namespace Automation.Capsule.UI.WebElementObjects
 {
     public class WebElementObjectBase
     {
-        WebDriverWait MobileWaitObject = new WebDriverWait(DriverContext.driver, TimeSpan.FromSeconds(10));
+        WebDriverWait MobileWaitObject = new WebDriverWait(DriverContext.WebDriver, TimeSpan.FromSeconds(10));
         private WebDriverWait WaitObject => new WebDriverWait(Driver, TimeSpan.FromSeconds(30));
         public By ByLocator { get; set; }
         public MobileBy MobileByLocator { get; set; }

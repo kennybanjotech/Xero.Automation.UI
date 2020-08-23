@@ -13,18 +13,18 @@ namespace Automation.Capsule.UI.Base
 {
     public class DriverContext
     {
-        //private static IWebDriver _driver;
-        //public static IWebDriver DynamicDriver()
-        //{
-        //    switch (ConfigReader.Platform)
-        //    {
-        //        case "Android":
-        //            return driver;
-        //        default:
-        //            return WebDriver;
+        private static IWebDriver _driver;
+        public static IWebDriver DynamicDriver()
+        {
+            switch (ConfigReader.Platform)
+            {
+                case "Android":
+                    return driver;
+                default:
+                    return WebDriver;
 
-        //    }
-        //}
+            }
+        }
 
 
         public static IWebDriver WebDriver { get; set; }
